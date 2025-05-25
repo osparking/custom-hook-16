@@ -9,6 +9,7 @@ export function useDebounce(value, delay) {
     }, delay);
     
     return () => {
+      console.log("리턴 호출됨 - 언마운트된 것임.");      
       clearTimeout(timer);
     };
   }, [value, delay]);
